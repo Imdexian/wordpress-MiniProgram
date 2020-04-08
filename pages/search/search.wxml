@@ -1,0 +1,34 @@
+
+<import src="../../templates/copyright.wxml" />
+
+
+<view class="search-head" style="display:{{display}}">
+    <!-- <image class="search-head-img" src="https://nomore.info/wp-content/uploads/2020/04/u3720312691521314144fm11gp0.jpg"></image> -->
+    <!-- <text>既然尚未拥有自由.那么皮就完事了</text> -->
+
+    <view class="search-head-empty"><ad unit-id="adunit-e579b044a99ee490"></ad></view>
+    <view class='search-head-wd'>全局搜索</view>
+    <view class='search-head-wd-bg'></view>
+    
+</view>
+
+<view style="display:{{isArticlesList?'block':'none'}}">
+ <form catchsubmit="formSubmit" catchreset="formReset" id="search-form">
+      <view class="search-box">
+        <input value="" id="search-input" name="input" confirm-type="search" class="search-input" placeholder="搜索内容" bindconfirm="formSubmit"></input>
+        <button class="search-button" form-type="submit"  size="mini" plain="true">
+          <icon type="search" color="#959595" size="16" />
+        </button>
+      </view>
+    </form> 
+  <view class="list-container">
+    <!-- <template is="tempCommonList" />
+    <view style='display:{{isLoading?"block":"none"}}'>
+      <template is="threepoint" />
+    </view> -->
+    <!-- <view class="no-more" style="display:{{isLastPage?'block':'none'}}">- 到底啦 -</view> -->
+    <view class="copyright">
+       <template is="tempCopyright" data="{{webSiteName:webSiteName,domain:domain}}"/>
+    </view>
+  </view>
+</view>
